@@ -12,16 +12,28 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    int num =1;
-
-    public void add (View view){
-        num = num+1;
-        display(num);
+    int age = 30;
+    public void AddItUp(View view){
+        age+=1;
+        display(age);
 
     }
-    public void display(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.message);
-        scoreView.setText(String.valueOf(score));
-}
-}
+    public void SubItUp(View view){
+        age-=1;
+        display(age);
+    }
+    public void display(int integerCalledNumberWhichIsTheResultOfpassingTheAgeVariableToThisMethod){
+        TextView age_number =(TextView)findViewById(R.id.textView);
+        age_number.setText(""+ integerCalledNumberWhichIsTheResultOfpassingTheAgeVariableToThisMethod);
+    }
+    public void calculateDogYears (View view){
+        int dage=age*7;
+        displaydage(dage);
 
+    }
+    public void displaydage(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.question_text);
+        scoreView.setText(String.valueOf(score));
+    }
+
+    }
